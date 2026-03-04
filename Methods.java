@@ -4,11 +4,18 @@ class Computer {
         System.out.println("Playing music...");
     }
     public String GetMeAPen(int a) {
-        if (a >= 10)
+        if (a == 10)
         {
             return "Here is a pen.";
         }
-        return "Sorry, you don't have enough points for a pen.";
+        if (a > 10)
+        {
+            return "Here are " + (a-10) + "Rs. and a pen.";
+        }
+        else
+        {
+            return "Sorry, I don't have that many pens.";
+        }
     }
 }
 
@@ -17,7 +24,7 @@ public class Methods {
     public static void main(String[] args) {
         Computer obj = new Computer();
         obj.PlayMusic();
-        String getPen = obj.GetMeAPen(2);
+        String getPen = obj.GetMeAPen(21);
         System.out.println(getPen);
     }
     
