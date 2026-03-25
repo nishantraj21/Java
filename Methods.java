@@ -22,9 +22,12 @@ class Computer {
 public class Methods {
 
     public static void main(String[] args) {
+        int num = (int)(Math.random() * 100) + 1;
+
         Computer obj = new Computer();
         obj.PlayMusic();
-        String getPen = obj.GetMeAPen(21);
+        
+        String getPen = obj.GetMeAPen(num);
         System.out.println(getPen);
     }
     
